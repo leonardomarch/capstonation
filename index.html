@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- set the character set -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- first step to a responsive site -->
+    <title>HTML Skeleton</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <!-- Your styles should be called here -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<![endif]-->
+  </head>
+
+  <body>
+    <!-- YOUR CONTENT GOES HERE -->
+
+
+    <video class="coverh" muted autoplay loop>
+      <source src="vid/cover3.mp4" type="video/mp4">
+
+    </video>
+
+    <video class="coverv" muted autoplay loop>
+      <source src="vid/coverv.mp4" type="video/mp4" media="screen and(max-device-width: 400px)">
+
+    </video>
+    <a class="fa fa-arrow-circle-down"></a>
+
+    <div class="container info">
+      <h1> hey, this is the title. short title. sounds good?!</h1>
+      <h4> by Leonardo March</h4>
+      <h2> this is the subtitle asdf asdf asdf asdf adsf asdf asdf asdf asdf asdf </h2>
+    </div>
+
+
+    <div class="container">
+      <p id="intro">this will be the intro line with context info that would
+        leave you asking for more. I promise-ish</p>
+
+
+
+
+      <div data-id="video1" class="video withVertical left">
+        <video data-id="video1" class="instagram" autoplay playsinline>
+          <source id=prueba src="vid/vid.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div data-id="video2" class="video withVertical middle">
+        <video data-id="video2" class="instagram" autoplay playsinline muted>
+          <source id=prueba2 src="vid/vid.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div data-id="video3" class="video withVertical right">
+        <video data-id="video3" class="instagram" autoplay playsinline muted>
+          <source id=prueba2 src="vid/vid.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+    <p>another line</p>
+
+
+    <div class="container">
+      <p>text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text</p>
+      <p>text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text</p>
+
+    </div>
+    <div class="container test">
+      <div class="images back">
+        <img id="intro" class="active " src="https://picsum.photos/id/1025/4951/3301" />
+        <img id="section_2" src="https://picsum.photos/id/1024/1920/1280" />
+        <img id="section_3" src="https://picsum.photos/id/0/1920/1080" />
+      </div>
+
+      <div class="content">
+        <p data-id="intro">text 1 ext here text text text text text text ttext text text text here text text text text text text text text text text
+          text text text text text</p>
+        <p data-id="section_2">text 2</p>
+        <p data-id="section_3">text 3</p>
+      </div>
+    </div>
+    <div class="container">
+
+
+
+      <p>now here's a video</p>
+
+
+
+      <div class="yt_player" data-id="iqqGFKwMNHQ"></div>
+      <div class="controls" data-id="iqqGFKwMNHQ">
+
+        <a class="fa fa-play"></a>
+        <a class="fa fa-pause"></a>
+        <a class="fa fa-volume-off"></a>
+      </div>
+      <p>text text here text text text text text text ttext text text text here text text text text text text text text text text
+        text text text text text</p>
+
+
+      <p>text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text</p>
+
+
+      <p>text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text</p>
+
+
+
+
+      <div class="yt_player" data-id="Y8x3LWVC1L4"></div>
+      <div class="controls" data-id="Y8x3LWVC1L4">
+        <a class="fa fa-play"></a>
+        <a class="fa fa-pause"></a>
+        <a class="fa fa-volume-off"></a>
+      </div>
+
+
+
+      <p>text text text</p>
+      <p>text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text</p>
+      <p>text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text</p>
+      <p>That's all folks</p>
+
+
+
+    </div>
+
+    <!-- the jQuery library. You need this to be able to use jQuery ($) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://watchjs.tcm.io/js/watch.min.js"></script>
+
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script src="main.js"></script>
+    <!-- Your javascript should be called here -->
+  </body>
+
+</html>

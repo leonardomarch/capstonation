@@ -1,0 +1,560 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+* {
+    box-sizing: border-box;
+}
+
+/** APPLY BASE TAG STYLES */
+body,
+html {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 400;
+    font-size: 7vw;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 3vw;
+    color: white;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+h4 {
+    font-weight: 200;
+    font-size: 2vw;
+    color: white;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+video#cover {
+    width: 100%
+}
+
+/** RESPONSIVE IMAGES */
+figure,
+img {
+    /* Sets image width to match parent */
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 1.4em;
+    font-weight: 100;
+    text-align: center;
+    padding-bottom: 50px;
+    color: white;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 100;
+}
+
+.instagram {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+    background-color: white;
+    z-index: 1;
+}
+
+.instagram.active {
+    width: 100%;
+    opacity: 1;
+}
+
+@media(orientation: portrait) {
+    .video.withVertical {
+        padding-bottom: 177%;
+        margin-top: 30px;
+    }
+}
+
+.fa-arrow-circle-down {
+    font-size: 7vw;
+    z-index: 3;
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    opacity: .5;
+    height: 10px;
+    font
+}
+
+/***************************
+  Just for cover image
+****************************/
+@media(max-width: 450px) {
+    .coverh {
+        display: none;
+    }
+
+    /* title into */
+    .container.info {
+        position: absolute;
+        top: 33%;
+        padding: 0;
+        width: 50%;
+        left: 5%;
+        margin-top: 0px;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 9vw;
+    }
+
+    h4 {
+        font-size: 3vw;
+    }
+
+    h4 {
+        font-size: 4vw;
+    }
+
+    .coverh, .coverv {
+        width: 100%;
+        display: inline-block;
+    }
+
+    /***********************************
+    Instagram Nagigation on top
+    *************************************/
+}
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+/** SET BORDER BOX EVERYWHERE */
+@media(min-width: 351px) {
+
+    /** cover **/
+    .coverh {
+        display: none;
+    }
+
+    /** image scroll**/
+    .container.test {
+        height: 30vh;
+        overflow: scroll;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .images.back {
+        position: absolute;
+        top: 1;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        margin: 0 auto;
+    }
+
+    .images img {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .images img.active {
+        opacity: 1;
+    }
+
+    /** image scroll**/
+    .content {
+        position: relative;
+        z-index: 2;
+        color: #FFF;
+        font
+    }
+
+    .content p {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: 10px;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    p #intro {
+        padding-top: 100px
+    }
+
+    /** Caption styles */
+    .caption,
+    figcaption {
+        font-size: 0.9rem;
+        color: #8e8a8a;
+        padding: 5px 0;
+    }
+
+    /** Container styles to keep content from becoming
+    too wide or coming too close to * mobile edge */
+    .container {
+        width: 75%;
+        min-width: 300px;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .container p {
+        padding-top: 300px;
+        padding-bottom: 400px
+    }
+
+    .container.text {
+        width: 90%;
+        max-width: 500px;
+        padding: 10px;
+        margin: 0 auto;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+
+    .cover.medium {
+        display: none
+    }
+
+    /** Images are allowed to be a little wider when broken out
+    into their own container */
+    .container.image {
+        max-width: 1200px;
+        padding: 0;
+    }
+
+    .container.image .caption,
+    .container.image figcaption {
+        padding: 5px 10px;
+    }
+
+    #video_container {
+        min-height: 100px;
+        background-color: #c7c7c7;
+    }
+
+    .video {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        transition: width 0.5s ease-in-out, right 0.5s ease-in-out, bottom 0.5s ease-in-out;
+    }
+
+    .video iframe, .video video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #000;
+    }
+
+    .images {
+        width: 100%;
+        position: relative;
+    }
+
+    .video.fixed {
+        position: fixed;
+        bottom: 0;
+    }
+
+    .yt {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .yt_player {
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-top: 100px
+    }
+
+    .fa {
+        color: white;
+        padding: 5px;
+        height: 90%;
+    }
+
+    .controls {
+        background-color: #0f131a;
+        padding: 5px;
+        width: 100%;
+    }
+
+    /* title into */
+    .container.info {
+        position: absolute;
+        top: 20%;
+        padding: 0;
+        width: 50%;
+        left: 5%;
+        margin-top: 0px;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 9vw;
+    }
+
+    h4 {
+        font-size: 3vw;
+    }
+
+    h4 {
+        font-size: 4vw;
+    }
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+/************************************
+  COVER
+*************************************/
+@media(max-width: 680px) {
+    .coverh {
+        display: none;
+    }
+
+    /* title into */
+    .container.info {
+        position: absolute;
+        top: 33%;
+        padding: 0;
+        width: 50%;
+        left: 5%;
+        margin-top: 0px;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 9vw;
+    }
+
+    h4 {
+        font-size: 3vw;
+    }
+
+    h4 {
+        font-size: 4vw;
+    }
+}
+
+.coverh, .coverv {
+    width: 100%
+}
+
+@media(min-width: 681px) {
+
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    p {
+        padding-top: 200px
+    }
+
+    .videocontainer {
+        height: 100%;
+        background-color: red;
+        margin-bottom: 40px;
+    }
+
+    .container.text {
+        width: 90%;
+        max-width: 800px;
+        padding: 80px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        margin-top: 00px;
+    }
+
+    .yt_player {
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-top: 00px
+    }
+
+    /* title into */
+    .container.info {
+        position: absolute;
+        top: 1%;
+        padding: 0;
+        width: 50%;
+        left: 5%;
+        margin-top: 0px;
+    }
+
+    .container.ig {
+        left: 0px;
+    }
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 769px) {
+
+    /***********************************
+      Just cover stuff
+    *************************************/
+    .coverv {
+        display: none;
+    }
+
+    .coverh {
+        display: block;
+    }
+
+    h1 {
+        font-weight: 400;
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 2vw;
+    }
+
+    h4 {
+        font-size: 2vw;
+    }
+
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .video.fixed {
+        right: 0;
+        width: 360px;
+        padding-bottom: calc(360px * .5625);
+    }
+
+    #video_container {
+        min-height: 500px;
+    }
+
+    .yt_player {
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-top: 00px
+    }
+
+    /* title into */
+    .container.info {
+        position: absolute;
+        top: 25%;
+        padding: 0;
+        width: 50%;
+        left: 5%;
+        margin-top: 0px;
+    }
+
+    /***********************************
+    Instagram Nagigation on top
+    *************************************/
+    .video.left {
+        width: 45%;
+        right: 1px;
+        margin-bottom: 200px;
+    }
+
+    .video.middle {
+        margin-right: 100px;
+        margin-bottom: 200px;
+    }
+
+    .video.right {
+        width: 134%;
+        right: 1%;
+        margin-bottom: 200px;
+    }
+}
+
+/*********************************************************************
+  YOUR MEDIUM-DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 805px) {
+
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container {
+        padding: 50px;
+        margin-top: 75px;
+        max-width: 900px;
+    }
+
+    .container.info {
+        position: absolute;
+        top: 15%;
+        padding: 0;
+        width: 50%;
+        left: 5%;
+        margin-top: 0px;
+    }
+
+    h1, h2, h4 {
+        text-align: left;
+        margin: 0;
+        color: white;
+        padding-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 5vw
+    }
+
+    .yt_player {
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-top: 125px
+    }
+
+    .container.info {
+        top: 5%;
+    }
+}
+
+/*********************************************************************
+  YOUR LARGE DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 1205px) {
+
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container.image .caption,
+    .container.image figcaption {
+        padding: 5px 0;
+    }
+
+    .yt_player {
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-top: 0px
+    }
+}
