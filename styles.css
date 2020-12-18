@@ -189,14 +189,6 @@ p {
         font
     }
 
-    .content p {
-        padding-top: 0px;
-        padding-bottom: 0px;
-        height: 10px;
-        width: 70%;
-        margin: 0 auto;
-    }
-
     p #intro {
         padding-top: 100px
     }
@@ -221,6 +213,18 @@ p {
     .container p {
         padding-top: 300px;
         padding-bottom: 400px
+    }
+
+    .content p {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: auto;
+        width: 70%;
+        margin: 0 auto;
+        background: white;
+        margin-bottom: 231px;
+        margin-top: 20px;
+        color: black;
     }
 
     .container.text {
