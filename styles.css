@@ -43,15 +43,11 @@ h4 {
     font-family: 'IBM Plex Serif', serif;
 }
 
-video#cover {
-    width: 100%
-}
-
 /** RESPONSIVE IMAGES */
 figure,
 img {
     /* Sets image width to match parent */
-    width: 100%;
+    width: 80%;
     display: block;
     margin: 0 auto;
 }
@@ -82,7 +78,6 @@ p {
 @media(orientation: portrait) {
     .video.withVertical {
         padding-bottom: 177%;
-        margin-top: 30px;
     }
 }
 
@@ -98,18 +93,78 @@ p {
     font
 }
 
-/***************************
-  Just for cover image
-****************************/
-@media(max-width: 450px) {
+.video {
+    position: relative;
+    margin: 0 auto;
+    height: 0;
+    padding-bottom: 56.25%;
+    transition: width 0.5s ease-in-out, right 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+
+.video[data-id] {
+    margin-bottom: 30px;
+}
+
+.video iframe, .video video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+}
+
+.mobile {
+    display: block;
+}
+
+.desktop {
+    display: none;
+}
+
+.container.intro {
+    padding-top: 200px;
+    margin: 0 auto;
+}
+
+/**********************
+Youtube controls
+***********************/
+.fa-volume-off.active {
+    display: inline-block;
+}
+
+.fa-volume-off {
+    display: none;
+}
+
+.fa-volume-up {
+    display: none;
+}
+
+.fa-volume-up.active {
+    display: inline-block;
+    opacity: 1
+}
+
+.controls {
+    background-color: #0f131a;
+    padding: 5px;
+    width: 100%;
+}
+
+/**********************
+Only for cover image
+***********************/
+@media(min-width: 450px) {
     .coverh {
         display: none;
     }
 
     /* title into */
     .container.info {
-        position: absolute;
-        top: 33%;
+        position: relative;
+        top: 20%;
         padding: 0;
         width: 50%;
         left: 5%;
@@ -131,199 +186,227 @@ p {
 
     .coverh, .coverv {
         width: 100%;
-        display: inline-block;
+        display: block;
     }
-
-    /***********************************
-    Instagram Nagigation on top
-    *************************************/
 }
 
 /*********************************************************************
   YOUR MOBILE/BASE STYLES GO HERE
 *********************************************************************/
 /** SET BORDER BOX EVERYWHERE */
-@media(min-width: 351px) {
+/** image scroll**/
+.container.test {
+    height: 200vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
 
-    /** cover **/
-    .coverh {
-        display: none;
-    }
+.images.back {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    margin: 0 auto;
+}
 
-    /** image scroll**/
-    .container.test {
-        height: 30vh;
-        overflow: scroll;
-        overflow-x: hidden;
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-    }
+.images.back img {
+    height: 100%;
+    width: 100%;
+}
 
-    .images.back {
-        position: absolute;
-        top: 1;
-        width: 100%;
-        height: 100vh;
-        z-index: 1;
-        margin: 0 auto;
-    }
+.images img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
-    .images img {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
+.images img.active {
+    opacity: 1;
+}
 
-    .images img.active {
-        opacity: 1;
-    }
+/** image scroll**/
+.content {
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
-    /** image scroll**/
-    .content {
-        position: relative;
-        z-index: 2;
-        color: #FFF;
-        font
-    }
+p #intro {
+    padding-top: 100px
+}
 
-    p #intro {
-        padding-top: 100px
-    }
+/** Caption styles */
+.caption,
+figcaption {
+    font-size: 0.9rem;
+    color: #8e8a8a;
+    padding: 5px 0;
+}
 
-    /** Caption styles */
-    .caption,
-    figcaption {
-        font-size: 0.9rem;
-        color: #8e8a8a;
-        padding: 5px 0;
-    }
-
-    /** Container styles to keep content from becoming
+/** Container styles to keep content from becoming
     too wide or coming too close to * mobile edge */
-    .container {
-        width: 75%;
-        min-width: 300px;
-        padding: 10px;
-        margin: 0 auto;
-    }
+.container {
+    width: 100%;
+    min-width: 350px;
+    padding: 10px;
+    margin: 0 auto;
+}
 
-    .container p {
-        padding-top: 300px;
-        padding-bottom: 400px
-    }
+.container p {
+    padding-top: 300px;
+    padding-bottom: 900px
+}
 
-    .content p {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        height: auto;
-        width: 70%;
-        margin: 0 auto;
-        background: white;
-        margin-bottom: 231px;
-        margin-top: 20px;
-        color: black;
-    }
+.content p {
+    padding: 10px;
+    height: auto;
+    width: 70%;
+    margin: 0 auto;
+    background: white;
+    margin-bottom: 231px;
+    margin-top: 20px;
+    color: black;
+    text-align: left;
+}
 
-    .container.text {
-        width: 90%;
-        max-width: 500px;
-        padding: 10px;
-        margin: 0 auto;
-        margin-top: 200px;
-        margin-bottom: 200px;
-    }
+.container.text {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
 
-    .cover.medium {
-        display: none
-    }
+.cover.medium {
+    display: none
+}
 
-    /** Images are allowed to be a little wider when broken out
+/** Images are allowed to be a little wider when broken out
     into their own container */
-    .container.image {
-        max-width: 1200px;
-        padding: 0;
-    }
+.container.image {
+    max-width: 1200px;
+    padding: 0;
+}
 
-    .container.image .caption,
-    .container.image figcaption {
-        padding: 5px 10px;
-    }
+/** Images are allowed to be a little wider when broken out
+    into their own container */
+.container.hero {
+    max-width: none;
+    padding: 0;
+}
 
-    #video_container {
-        min-height: 100px;
-        background-color: #c7c7c7;
-    }
+.container.image .caption,
+.container.image figcaption {
+    padding: 5px 10px;
+}
 
-    .video {
-        position: relative;
-        width: 100%;
-        height: 0;
+#video_container {
+    min-height: 100px;
+    background-color: #c7c7c7;
+}
+
+.images {
+    width: 100%;
+    position: relative;
+}
+
+.video.fixed {
+    position: fixed;
+    bottom: 0;
+}
+
+.fa {
+    color: white;
+    padding: 5px;
+    height: 90%;
+}
+
+/* title into */
+.container.info {
+    position: relative;
+    top: 20%;
+    padding: 0;
+    width: 50%;
+    left: 5%;
+    margin-top: 0px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 9vw;
+}
+
+h4 {
+    font-size: 3vw;
+}
+
+h4 {
+    font-size: 4vw;
+}
+
+.instagram.active {
+    width: 100%;
+    opacity: 1;
+}
+
+.container.ig {
+    max-width: 50%;
+    padding-bottom: 200px;
+}
+
+figcaption {
+    color: white;
+    background-color: inherit;
+    font-weight: 500;
+    font-size: .8em;
+    padding-top: 0px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+.container.info {
+    position: absolute;
+    top: 5%;
+    padding: 0;
+    width: 50%;
+    margin-top: 0px;
+}
+
+/************************************
+  ONLY FOR COVER
+*************************************/
+@media(min-width: 680px) {
+    .video.withVertical.ig {
         padding-bottom: 56.25%;
-        transition: width 0.5s ease-in-out, right 0.5s ease-in-out, bottom 0.5s ease-in-out;
-    }
-
-    .video iframe, .video video {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: #000;
-    }
-
-    .images {
-        width: 100%;
-        position: relative;
-    }
-
-    .video.fixed {
-        position: fixed;
-        bottom: 0;
-    }
-
-    .yt {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-    }
-
-    .yt_player {
-        width: 100%;
-        top: 0;
-        left: 0;
-        padding-top: 100px
-    }
-
-    .fa {
-        color: white;
-        padding: 5px;
-        height: 90%;
-    }
-
-    .controls {
-        background-color: #0f131a;
-        padding: 5px;
-        width: 100%;
     }
 
     /* title into */
     .container.info {
         position: absolute;
-        top: 20%;
+        top: 0%;
         padding: 0;
         width: 50%;
-        left: 5%;
         margin-top: 0px;
+    }
+
+    .container.ig {
+        max-width: 75%;
+        padding-bottom: 56%;
     }
 
     h1 {
         font-weight: 400;
-        font-size: 9vw;
+        font-size: 5vw;
     }
 
     h4 {
@@ -333,48 +416,14 @@ p {
     h4 {
         font-size: 4vw;
     }
-}
 
-/*********************************************************************
-  YOUR TABLET/DESKTOP STYLES GO HERE
-*********************************************************************/
-/************************************
-  COVER
-*************************************/
-@media(max-width: 680px) {
-    .coverh {
+    .mobile {
         display: none;
     }
 
-    /* title into */
-    .container.info {
-        position: absolute;
-        top: 33%;
-        padding: 0;
-        width: 50%;
-        left: 5%;
-        margin-top: 0px;
+    .desktop {
+        display: block;
     }
-
-    h1 {
-        font-weight: 400;
-        font-size: 9vw;
-    }
-
-    h4 {
-        font-size: 3vw;
-    }
-
-    h4 {
-        font-size: 4vw;
-    }
-}
-
-.coverh, .coverv {
-    width: 100%
-}
-
-@media(min-width: 681px) {
 
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
@@ -404,18 +453,15 @@ p {
         padding-top: 00px
     }
 
-    /* title into */
-    .container.info {
-        position: absolute;
-        top: 1%;
-        padding: 0;
+    .content p {
         width: 50%;
-        left: 5%;
-        margin-top: 0px;
     }
 
-    .container.ig {
-        left: 0px;
+    /***********************/
+    /* title into */
+    /***********************/
+    .coverv {
+        display: none;
     }
 }
 
@@ -470,31 +516,10 @@ p {
     /* title into */
     .container.info {
         position: absolute;
-        top: 25%;
+        top: 2%;
         padding: 0;
         width: 50%;
-        left: 5%;
         margin-top: 0px;
-    }
-
-    /***********************************
-    Instagram Nagigation on top
-    *************************************/
-    .video.left {
-        width: 45%;
-        right: 1px;
-        margin-bottom: 200px;
-    }
-
-    .video.middle {
-        margin-right: 100px;
-        margin-bottom: 200px;
-    }
-
-    .video.right {
-        width: 134%;
-        right: 1%;
-        margin-bottom: 200px;
     }
 }
 
@@ -507,17 +532,11 @@ p {
     Note these styles will be applied to anything 769px or larger -- so desktop */
     .container {
         padding: 50px;
-        margin-top: 75px;
         max-width: 900px;
     }
 
     .container.info {
-        position: absolute;
-        top: 15%;
-        padding: 0;
-        width: 50%;
-        left: 5%;
-        margin-top: 0px;
+        top: 1%;
     }
 
     h1, h2, h4 {
@@ -528,18 +547,14 @@ p {
     }
 
     h1 {
-        font-size: 5vw
+        font-size: 6vw
     }
 
-    .yt_player {
-        width: 100%;
-        top: 0;
-        left: 0;
-        padding-top: 125px
-    }
-
-    .container.info {
-        top: 5%;
+    .fa-arrow-circle-down {
+        font-size: 3vw;
+        position: relative;
+        bottom: 60px;
+        text-align: center;
     }
 }
 
@@ -560,5 +575,16 @@ p {
         top: 0;
         left: 0;
         padding-top: 0px
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 3vw;
+        position: relative;
+        bottom: 70px;
+        text-align: center;
+    }
+
+    .content p {
+        width: 34%;
     }
 }

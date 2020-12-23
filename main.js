@@ -50,7 +50,7 @@ $("body").on("click", ".fa-play", function (e) {
 	const player_id = this_controls.data("id");
 
 	players[player_id].playVideo();
-	players[player_id].unMute();
+
 
 });
 
@@ -73,8 +73,19 @@ $("body").on("click", ".fa-volume-off", function (e) {
 	const this_controls = this_play_button.closest(".controls");
 	const player_id = this_controls.data("id");
 
-	players[player_id].mute()
 
+	if (players[player_id].isMuted()) {
+		players[player_id].unMute();
+		$(".fa-volume-up").removeClass("active");
+		$(".fa-volume-off").addClass("active");
+		console.log("first")
+	} else {
+		players[player_id].mute();
+		$(".fa-volume-off .active").removeClass("active");
+		$(".fa-volume-up").removeClass("active");
+
+		console.log("second")
+	}
 
 });
 
@@ -85,7 +96,7 @@ $(() => {
 		const $this_div = $(this);
 		const $this_video = $this_div.find("video");
 
-		new Watch($this_div, { threshold: .90 }).inView(() => {
+		new Watch($this_div, { rootMargin: "-49%" }).inView(() => {
 
 			$this_video.addClass("active");
 			console.log("Im alive")
