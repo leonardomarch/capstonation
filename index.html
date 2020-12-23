@@ -23,66 +23,160 @@
   </head>
 
   <body>
-    <!-- YOUR CONTENT GOES HERE -->
 
-
-    <video data-id="video1" class="coverh" muted autoplay loop>
-      <source data-id="video1" class="instagram" src="vid/cover3.mp4" type="video/mp4">
-
-    </video>
-
-    <video class="coverv" muted autoplay loop>
-      <source src="vid/coverv.mp4" type="video/mp4" media="screen and(max-device-width: 400px)">
-
-    </video>
-    <a class="fa fa-arrow-circle-down"></a>
-
-    <div class="container info">
-      <h1> hey, this is the title. short title. sounds good?!</h1>
-      <h4> by Leonardo March</h4>
-      <h2> this is the subtitle asdf asdf asdf asdf adsf asdf asdf asdf asdf asdf </h2>
+    <div class="images back">
+      <img id="intro" class="active" src="img/background1.png" />
+      <img id="section_2" src="img/background2.png" />
+      <img id="section_3" src="img/img1.jpg" />
+      <img id="section_4" src="img/img2.jpg" />
+      <img id="section_5" src="img/img2.jpg" />
     </div>
 
+    <div class="content">
 
-    <div class="container">
-      <p id="intro">this will be the intro line with context info that would
-        leave you asking for more. I promise-ish</p>
-
-
-
-
-      <div data-id="video1" class="video withVertical left">
-        <video data-id="video1" class="instagram" autoplay playsinline>
-          <source id=prueba src="vid/vid.mp4" type="video/mp4">
-        </video>
+      <div class="container hero">
+        <div class="video withVertical ig">
+          <video class="desktop" muted autoplay loop playsinline>
+            <source src="vid/coverh.mp4" type="video/mp4">
+          </video>
+          <video class="mobile" muted autoplay loop playsinline>
+            <source src="vid/coverv.mp4" type="video/mp4" media="screen and(max-device-width: 400px)">
+          </video>
+        </div>
       </div>
 
-      <div data-id="video2" class="video withVertical middle">
-        <video data-id="video2" class="instagram" autoplay playsinline muted>
-          <source id=prueba2 src="vid/vid.mp4" type="video/mp4">
-        </video>
+
+
+      <div class="container info">
+        <h1> hey, this is the title. short title. sounds good?!</h1>
+        <h4> by Leonardo March</h4>
+        <h2> this is the subtitle asdf asdf asdf asdf adsf asdf asdf asdf asdf asdf </h2>
+
+      </div>
+      <a class="fa fa-arrow-circle-down"></a>
+
+      <div class="container intro">
+        <p data-id="intro">Intro. this will be the intro line with context info that would
+          leave you asking for more. I promise-ish</p>
       </div>
 
-      <div data-id="video3" class="video withVertical right">
-        <video data-id="video3" class="instagram" autoplay playsinline muted>
-          <source id=prueba2 src="vid/vid.mp4" type="video/mp4">
-        </video>
+      <div class="container ig ">
+        <div data-id="intro" class="video withVertical">
+          <video data-id="intro" class="instagram" label="asdfasd" autoplay playsinline>
+            <figcaption> caption for this </figcaption>
+            <source src="vid/vid.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
 
-    </div>
+      <div class="container ig center">
+        <div data-id="intro" class="video withVertical">
+          <video data-id="intro" class="instagram" autoplay playsinline>
+            <source src="vid/vid.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
 
-    <p>another line</p>
+      <div class="container ig right">
+        <div data-id="intro" class="video withVertical">
+          <video data-id="intro" class="instagram" autoplay playsinline>
+            <source src="vid/vid.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!--Item 2 -->
+      <p data-id="section_2">Section 2 text 2 ext here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text<br><br>text text here text text text text text text text text text text
+        text text text text text</p>
 
 
-    <div class="container">
-      <p>text text here text text text text text text text text text text
+      <div class="container image">
+        <div class="video">
+          <div class="yt_player" data-id="iqqGFKwMNHQ"></div>
+        </div>
+        <div class="controls" data-id="iqqGFKwMNHQ">
+          <a class="fa fa-play"></a>
+          <a class="fa fa-pause"></a>
+          <a class="fa fa-volume-off active"></a>
+          <a class="fa fa-volume-up "></a>
+        </div>
+      </div>
+
+      <p></p>
+
+      <!--Item 3 -->
+
+      <p data-id="section_3">Section 3 text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text<br><br>text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text<br><br>text text here text text text text text text text text text text
         text text text text text text text here text text text text text text text text text text
         text text text text text</p>
-      <p>text text here text text text text text text text text text text
+
+
+
+      <!--Item 4 -->
+      <p data-id="section_4">Section 4 text text here text text text text text text text text text text
         text text text text text text text here text text text text text text text text text text
         text text text text text</p>
 
+      <p>now here's another video</p>
+
+      <div class="container image">
+        <div class="video">
+          <div class="yt_player" data-id="_d5X2t_s9g8"></div>
+        </div>
+        <div class="controls" data-id="_d5X2t_s9g8">
+          <a class="fa fa-play"></a>
+          <a class="fa fa-pause"></a>
+          <a class="fa fa-volume-off active"></a>
+          <a class="fa fa-volume-up "></a>
+        </div>
+      </div>
+
+
+      <p>text text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text<br><br>text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text<br><br>text text here text text text text text text text text text text
+        text text text text text text text here text text text text text text text text text text
+        text text text text text</p>
+
+
+
+      <p data-id="section_5">The end</p>
+
     </div>
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- the jQuery library. You need this to be able to use jQuery ($) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://watchjs.tcm.io/js/watch.min.js"></script>
+
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script src="main.js"></script>
+    <!-- Your javascript should be called here -->
+
+    <!--Item 4
+
     <div class="container test">
       <div class="images back">
         <img id="intro" class="active " src="https://picsum.photos/id/1025/4951/3301" />
@@ -99,53 +193,7 @@
     </div>
     <div class="container">
 
-
-
-      <p>now here's a video</p>
-
-
-
-      <div class="yt_player" data-id="iqqGFKwMNHQ"></div>
-      <div class="controls" data-id="iqqGFKwMNHQ">
-
-        <a class="fa fa-play"></a>
-        <a class="fa fa-pause"></a>
-        <a class="fa fa-volume-off"></a>
-      </div>
-      <p>text text here text text text text text text ttext text text text here text text text text text text text text text text
-        text text text text text</p>
-
-
-      <p>text text here text text text text text text text text text text
-        text text text text text text text here text text text text text text text text text text
-        text text text text text</p>
-
-
-      <div class="yt_player" data-id="Y8x3LWVC1L4"></div>
-      <div class="controls" data-id="Y8x3LWVC1L4">
-        <a class="fa fa-play"></a>
-        <a class="fa fa-pause"></a>
-        <a class="fa fa-volume-off"></a>
-      </div>
-
-
-
-      <p>text text here text text text text text text text text text text
-        text text text text text text text here text text text text text text text text text text
-        text text text text text</p>
-      <p>That's all folks</p>
-
-
-
-    </div>
-
-    <!-- the jQuery library. You need this to be able to use jQuery ($) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://watchjs.tcm.io/js/watch.min.js"></script>
-
-    <script async src="https://www.youtube.com/iframe_api"></script>
-    <script src="main.js"></script>
-    <!-- Your javascript should be called here -->
+-->
   </body>
 
 </html>
